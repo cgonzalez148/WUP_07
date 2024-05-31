@@ -41,19 +41,18 @@ Result depends on sex, we use helper file cat~cat
 
 # Results
 
+
+
+
+## Graphical results - use ggplot commands to do this
+
 ```{r}
 barchartGC(~result + Sex,data=kRdata)
 barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
-## Graphical results - use ggplot commands to do this  
-
-
-
-  
-
-
+This bar chart shows that more woman got to live than die. 
 
 
 
