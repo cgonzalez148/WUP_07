@@ -42,8 +42,8 @@ Result depends on sex, we use helper file cat~cat
 # Results
 
 ```{r}
-barchartGC(~class + Sex,data=ucdavis1)
-barchartGC(~class + Sex,data=ucdavis1, type="percent")
+barchartGC(~result + Sex,data=kRdata)
+barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
