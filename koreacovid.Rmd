@@ -39,7 +39,7 @@ Result is a categorical variable, sex is is categorical
 Result depends on sex, we use helper file cat~cat  
 
 
-
+# Results
 
 ## Graphical results - use ggplot commands to do this  
 
