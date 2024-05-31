@@ -20,7 +20,7 @@ mutate(across(where(is.character), as.factor))
 ```
 
 # Introduction
-
+The purpose of this is to figure out if dying is independant of sex. We were able to achicve these results by getting data based off the sex. The data comes from South Korea.
 
 
 ### Data is from the Patient_Info dataset from South Korea 1 Jan to 1 May 2020   
@@ -32,17 +32,13 @@ state of a patient must be died or alive - we adjust that as well
   
 # Your Question - Is dying independent of sex?
 
+$H_0$ There is no difference in between death rates depending on sex.
+$H_A$ There is a difference in between sex because men died more than women. 
 
 # Methods
 
 Result is a categorical variable, sex is is categorical  
 Result depends on sex, we use helper file cat~cat  
-
-
-# Results
-
-
-
 
 ## Graphical results - use ggplot commands to do this
 
@@ -66,8 +62,16 @@ This numerical summary shows that out of 100% of the dead 98.7% of the females w
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
+The p-value for the Chi-squared test is 0.00, so we reject the null hypothesis. Gender and death by covid are dependent.
 
+The Fishcer exact test shows that men are 2.3 times more likely to die than women in Korea.
 
 ## Conclusions
 
+The original question was "Is dying independent of sex?" and the answer is that it is dependent on sex. We got the data seeing how many men vs women survived covid 19. The results depend on sex because it is a categorical variable. The results tell us that men are more likely to die from covid 19 in Korea than women are. Men are 2.3 times more likely to die than women. There is a relationship between sex and death in Korea.
