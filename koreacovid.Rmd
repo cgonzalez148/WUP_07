@@ -54,11 +54,15 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
 
 This bar chart shows that more woman got to live than die. 
 
-
-
   
 ## Numerical results
 
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+This numerical summary shows that out of 100% of the dead 98.7% of the females were alive and 97% of the males died. 
 
 ## Inferential results 
 
